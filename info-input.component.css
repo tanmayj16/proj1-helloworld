@@ -1,0 +1,15 @@
+input.ng-invalid{
+    border-left: 8px solid red;
+}
+
+input.ng-valid{
+    border-left: 8px solid green;
+}
+
+.error{
+    color: red;
+    font-style: italic;
+    background-color:mediumturquoise;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 17px;
+}

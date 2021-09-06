@@ -1,0 +1,43 @@
+<form [formGroup]= "formfilling" (ngSubmit)="onSubmit()" (ngReset)="onReset()">
+    <h1>Personal Details</h1>
+<p>
+<label>
+    First Name:<input type="text" formControlName='firstName'>
+</label></p><br>
+
+<label>
+    Last Name:<input type="text" formControlName='lastName'>
+</label><br>
+<p>
+<label>
+    Gender:<input type="radio" name ="gender" value="Male" formControlName='gender'>Male<br>
+           <input type="radio" name="gender" value="Female" formControlName='gender'>Female<br>
+           <input type="radio" name="gender" value="Other" formControlName='gender'>Other<br>
+</label></p>
+           
+<label>
+    Address:<textarea id ="address" cols="25" rows="5" formControlName='address'></textarea>
+</label><br>
+<p>
+<label>
+    Email-Id :<input type="text" formControlName='email'>
+</label>
+<span class="error" *ngIf="email.invalid && email.touched">Email is invalid</span>
+</p><br>
+<p>
+<label>
+    Password :<input type="password" formControlName='password'>
+</label><span class="error" *ngIf="password.invalid && password.touched">Password should be atleast 8 characters long</span></p><br>
+
+
+
+
+
+<p>
+<button type="submit">Submit</button>
+<button type="reset">Reset</button>
+</p>
+<nav>
+    <a class="button" routerLink="/dolist">Your To-Do List</a>
+  </nav>
+</form>

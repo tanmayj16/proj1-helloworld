@@ -1,0 +1,54 @@
+
+<!--<div style="text-align: center">
+  <h1>Angular</h1>
+<courses></courses>
+<router-outlet></router-outlet>
+  <img
+  src="../assets/angularlogo2.png"
+  alt="Angular's logo"
+  width="180"
+  height="150"
+  class="logo"
+  />
+  <h1 class="app-title">TJ's To-do List</h1>
+
+</div> 
+
+<div class="container">
+  Add a todo....
+  <br>
+  <input 
+  type="text"
+  class="input-text"
+  placeholder="Type a todo"
+  [(ngModel)]="todoValue"
+
+  (keyup.enter)="addItem()"
+  
+  />
+
+<button class="add-btn" (click)="addItem()">Add todo</button>
+<div class="list">
+  <ul>
+    <li *ngFor="let item of list">
+      <input type="checkbox" name="isDone"
+      [(ngModel)]="item.isDone"
+      />
+      {{item.value}}
+      <div *ngIf="item.value.includes('!')">
+      
+      <button class="btn" (click)="deleteItem(item.id)">Delete</button>
+      </div>
+      
+
+        <button *ngIf="!item.value.includes('!')" class="btn" (click)="deleteItem(item.id)">Delete</button>
+        
+    </li>
+
+  </ul>
+</div>
+<nav>
+  <a class="button" routerLink="/info-input">Form Filling</a>
+</nav>
+</div>-->
+<router-outlet></router-outlet>
